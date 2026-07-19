@@ -1,0 +1,78 @@
+plugins {
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+    id 'maven-publish'
+}
+
+version = mod_version
+group = mod_group_id
+
+base { archivesName = mod_id }
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: mapping_channel, version: mapping_version
+    copyIdeResources = true
+
+    runs {
+        configureEach {
+            workingDirectory project.file('run')
+            property 'forge.logging.console.level', 'info'
+            mods { "${mod_id}" { source sourceSets.main } }
+        }
+        client {}
+        server { args '--nogui' }
+    }
+}
+
+repositories {
+    maven {
+        name = "Iron's Maven - Releases"
+        url = 'https://code.redspace.io/releases'
+    }
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    implementation fg.deobf("io.redspace:irons_spellbooks:${irons_spells_version}")
+    runtimeOnly fg.deobf("io.redspace:irons_lib:${irons_lib_version}")
+}
+
+// Iron's Spells and Forge 1.20.1 expose transitional APIs that are scheduled
+// for a future replacement. They are valid for this target, so hide only the
+// associated removal warnings while retaining all other compiler warnings.
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs += ['-Xlint:-removal']
+}
+
+def replaceProperties = [
+        minecraft_version_range: minecraft_version_range,
+        forge_version_range: forge_version_range,
+        loader_version_range: loader_version_range,
+        mod_id: mod_id,
+        mod_name: mod_name,
+        mod_version: mod_version,
+        mod_authors: mod_authors,
+        mod_description: mod_description
+]
+
+processResources {
+    inputs.properties replaceProperties
+    filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
+        expand replaceProperties
+    }
+}
+
+jar {
+    manifest {
+        attributes([
+                'Specification-Title': mod_name,
+                'Specification-Vendor': mod_authors,
+                'Specification-Version': '1',
+                'Implementation-Title': project.name,
+                'Implementation-Version': project.jar.archiveVersion,
+                'Implementation-Vendor': mod_authors
+        ])
+    }
+    finalizedBy 'reobfJar'
+}
