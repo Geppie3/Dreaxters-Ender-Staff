@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" shape-rendering="crispEdges">
+  <rect width="32" height="32" fill="none"/>
+  <polygon points="2,28 5,31 23,13 20,10" fill="#120b20"/>
+  <polygon points="4,28 6,30 22,14 20,12" fill="#3d1c62"/>
+  <polygon points="6,26 7,27 20,14 19,13" fill="#7737a6"/>
+  <polygon points="10,21 12,23 14,21 12,19" fill="#1b1428"/>
+  <polygon points="11,20 13,22 14,21 12,19" fill="#a047d8"/>
+  <polygon points="15,16 16,17 18,15 17,14" fill="#9a4fd0"/>
+  <path d="M13 18h6v6h-6z" fill="#151223"/>
+  <path d="M14 19h4v4h-4z" fill="#7624ba"/>
+  <path d="M15 19h2v2h-2z" fill="#d78cff"/>
+  <path d="M12 19h1v4h-1zM19 19h1v4h-1zM14 17h4v1h-4zM14 24h4v1h-4z" fill="#292038"/>
+  <polygon points="19,11 21,5 27,2 31,6 28,13 23,15" fill="#100f1e"/>
+  <polygon points="21,10 22,6 27,4 29,7 27,11 23,13" fill="#173044"/>
+  <polygon points="22,9 23,6 27,5 28,7 26,10 23,11" fill="#4b9a82"/>
+  <polygon points="23,8 24,7 26,7 27,8 25,10" fill="#b5f17c"/>
+  <rect x="24" y="8" width="2" height="2" fill="#101013"/>
+  <path d="M19 5l2-2 2 1-1 2zM28 3l2 1-1 2-2-1zM28 11l2 1-2 2-2-1z" fill="#6b3398"/>
+</svg>

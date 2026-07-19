@@ -1,0 +1,20 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "enderstaves:item/ender_staff"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "scale": [0.55, 0.55, 0.55]
+    },
+    "thirdperson_lefthand": {
+      "scale": [0.55, 0.55, 0.55]
+    },
+    "firstperson_righthand": {
+      "scale": [0.55, 0.55, 0.55]
+    },
+    "firstperson_lefthand": {
+      "scale": [0.55, 0.55, 0.55]
+    }
+  }
+}

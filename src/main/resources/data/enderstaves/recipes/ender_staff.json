@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " AE",
+    " RA",
+    "N  "
+  ],
+  "key": {
+    "A": { "item": "irons_spellbooks:arcane_ingot" },
+    "E": { "item": "minecraft:ender_eye" },
+    "R": { "item": "minecraft:end_rod" },
+    "N": { "item": "minecraft:netherite_ingot" }
+  },
+  "result": {
+    "item": "enderstaves:ender_staff"
+  }
+}
