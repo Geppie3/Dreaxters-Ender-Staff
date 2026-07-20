@@ -29,6 +29,13 @@ For a development client:
 ./gradlew runClient
 ```
 
+## Update 1.1.0
+- Added configurable Ender Staff bonuses:
+  - Ender spell power
+  - Mana regeneration
+  - Maximum mana
+- Added a revised custom 3D Ender Staff model.
+- Added updated staff textures, including the Eye, platform, hilt, holder, handle, and shaft textures.
 
 ## Required runtime mods
 
