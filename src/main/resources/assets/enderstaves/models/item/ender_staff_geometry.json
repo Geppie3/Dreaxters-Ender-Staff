@@ -7,7 +7,7 @@
     8
   ],
   "textures": {
-    "1": "enderstaves:item/eye_texture",
+    "1": "enderstaves:item/transparent",
     "2": "enderstaves:item/staff_lower_texture",
     "3": "enderstaves:item/staff_upper_texture",
     "4": "enderstaves:item/handle_texture",

@@ -1,0 +1,79 @@
+{
+  "format_version": "1.9.0",
+  "credit": "Ender Staff Eye Glow",
+  "ambientocclusion": false,
+  "texture_size": [8, 8],
+  "textures": {
+    "1": "enderstaves:item/eye_texture",
+    "particle": "enderstaves:item/eye_texture"
+  },
+  "elements": [
+    {
+      "name": "eye_glow",
+      "from": [8, 13.547445255474452, 7],
+      "to": [8, 15.182481751824817, 9],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [7.428571428571429, 13.197080291970803, 7.571428571428571]
+      },
+      "faces": {
+        "north": {
+          "uv": [0, 0, 0, 6.5],
+          "texture": "#1"
+        },
+        "east": {
+          "uv": [0, 7, 6.5, 13.5],
+          "texture": "#1"
+        },
+        "south": {
+          "uv": [0, 0, 0, 6.5],
+          "texture": "#1"
+        },
+        "west": {
+          "uv": [0, 7, 6.5, 13.5],
+          "texture": "#1"
+        },
+        "up": {
+          "uv": [0, 6.5, 0, 0],
+          "texture": "#1"
+        },
+        "down": {
+          "uv": [0, 0, 0, 6.5],
+          "texture": "#1"
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [90, 43.75, -90],
+      "translation": [1.75, 0, 0]
+    },
+    "firstperson_righthand": {
+      "rotation": [0, -2.5, 0],
+      "translation": [8, 11, 10]
+    },
+    "firstperson_lefthand": {
+      "rotation": [0, -2.5, 0],
+      "translation": [8, 11, 10]
+    },
+    "thirdperson_righthand": {
+      "rotation": [0, 0, 0],
+      "translation": [8, 9, 8],
+      "scale": [2.5, 2.5, 2.5]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [0, -2.5, 0],
+      "translation": [8, 9, 8],
+      "scale": [2.5, 2.5, 2.5]
+    },
+    "ground": {
+      "translation": [0, 0, 3]
+    },
+    "fixed": {
+      "rotation": [-90, 45.75, 90],
+      "translation": [1.75, -2.25, 0]
+    }
+  }
+}
