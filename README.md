@@ -12,7 +12,6 @@ While held in the main hand, the staff provides:
 - 6 total melee attack damage (1 base player damage + 5 item modifier)
 - Staff casting animation and weapon enchantability inherited from Iron's `StaffItem`
 
-
 ## Building
 
 Use Java 17, then run:
@@ -29,6 +28,20 @@ For a development client:
 ./gradlew runClient
 ```
 
+## Update 1.2.0
+
+- Added a full-bright, animated Eye of Ender crystal to the custom Ender Staff model.
+- Added a gentle crystal pulse, floating motion, and subtle drift effect.
+- Added a dedicated Eye glow model and transparent base-eye texture so the animated crystal renders cleanly without overlapping the staff body.
+
+## Update 1.1.0
+
+- Added configurable Ender Staff bonuses:
+  - Ender spell power
+  - Mana regeneration
+  - Maximum mana
+- Added a revised custom 3D Ender Staff model.
+- Added updated staff textures, including the Eye, platform, hilt, holder, handle, and shaft textures.
 
 ## Required runtime mods
 
