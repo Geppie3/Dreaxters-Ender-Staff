@@ -54,4 +54,4 @@ L_Ender's Cataclysm is optional.
 
 ## License
 
-MIT
+All Rights Reserved. This project is proprietary. No permission is granted to use, copy, modify, share, distribute, or create derivative works without prior written permission from Dreaxter.
