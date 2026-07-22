@@ -4,7 +4,7 @@ license="MIT"
 
 [[mods]]
 modId="enderstaves"
-version="1.0.1"
+version="${mod_version}"
 displayName="Ender Staffs"
 authors="Dreaxter"
 description='''Adding a staff for ender magic'''
