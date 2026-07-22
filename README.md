@@ -2,7 +2,7 @@
 
 A Forge 1.20.1 addon for Iron's Spells 'n Spellbooks.
 
-Available on Modrinth.
+Available on Modrinth & Curseforge.
 
 # Ender Staff
 
