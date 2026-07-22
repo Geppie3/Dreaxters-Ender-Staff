@@ -28,6 +28,10 @@ For a development client:
 ./gradlew runClient
 ```
 
+## Update 1.2.1
+
+- Refined the Ender Staff's inventory GUI positioning, scale, and proportions.
+
 ## Update 1.2.0
 
 - Added a full-bright, animated Eye of Ender crystal to the custom Ender Staff model.
