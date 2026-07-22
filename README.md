@@ -2,6 +2,8 @@
 
 A Forge 1.20.1 addon for Iron's Spells 'n Spellbooks.
 
+Available on Modrinth.
+
 # Ender Staff
 
 While held in the main hand, the staff provides:
