@@ -40,6 +40,14 @@ public final class EnderStaffRenderer extends BlockEntityWithoutLevelRenderer {
         BakedModel staffModel = minecraft.getModelManager().getModel(GEOMETRY_MODEL);
         BakedModel eyeGlowModel = minecraft.getModelManager().getModel(EYE_GLOW_MODEL);
 
+        // Scales the entire staff and animated Eye in the inventory/GUI only.
+        poseStack.pushPose();
+
+        if (displayContext == ItemDisplayContext.GUI) {
+            poseStack.translate(0.05D, 0.14D, 0.0D);
+            poseStack.scale(1.15F, 0.84F, 1.15F);
+        }
+
         minecraft.getItemRenderer().render(
                 stack,
                 displayContext,
@@ -84,6 +92,7 @@ public final class EnderStaffRenderer extends BlockEntityWithoutLevelRenderer {
                 eyeGlowModel
         );
 
-        poseStack.popPose();
+        poseStack.popPose(); // Eye animation
+        poseStack.popPose(); // GUI scale
     }
 }
