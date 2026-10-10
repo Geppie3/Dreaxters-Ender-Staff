@@ -1,3 +1,12 @@
 {
-  "item.enderstaves.ender_staff": "Ender Staff"
+  "item.enderstaves.ender_staff": "Ender Staff",
+  "item.enderstaves.ascended_ender_staff": "Ascended Ender Staff",
+  "item.enderstaves.void_touched_ender_staff": "Void-Touched Ender Staff",
+  "item.enderstaves.ender_mage_helmet": "Ender Mage Helmet",
+  "item.enderstaves.ender_mage_chestplate": "Ender Mage Robes",
+  "item.enderstaves.ender_mage_leggings": "Ender Mage Leggings",
+  "item.enderstaves.ender_mage_boots": "Ender Mage Boots",
+  "item.enderstaves.ender_mage_armor.set_bonus": "Full Set Bonus: +65% Ender Spell Power",
+  "effect.enderstaves.ender_mage_set_bonus": "Ender Mage Set: +65% Ender Power",
+  "effect.enderstaves.ender_mage_set_bonus.description": "Granted while all four Ender Mage armour pieces are worn: +65% Ender Spell Power."
 }

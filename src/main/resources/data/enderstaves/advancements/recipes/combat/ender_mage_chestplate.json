@@ -1,0 +1,17 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_wizard_base": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "tag": "irons_spellbooks:wizard_base_chestplate" }]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": { "recipe": "enderstaves:ender_mage_chestplate" }
+    }
+  },
+  "requirements": [["has_wizard_base", "has_the_recipe"]],
+  "rewards": { "recipes": ["enderstaves:ender_mage_chestplate"] }
+}

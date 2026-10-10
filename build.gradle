@@ -30,12 +30,24 @@ repositories {
         name = "Iron's Maven - Releases"
         url = 'https://code.redspace.io/releases'
     }
+    maven {
+        name = 'GeckoLib'
+        url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroupByRegex("software\\.bernie.*")
+            includeGroup("com.eliotlash.mclib")
+        }
+    }
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     implementation fg.deobf("io.redspace:irons_spellbooks:${irons_spells_version}")
     runtimeOnly fg.deobf("io.redspace:irons_lib:${irons_lib_version}")
+    // Compile-only: the Ender Mage armour extends Iron's Spells' GeckoLib-backed
+    // armour classes. GeckoLib itself is supplied at runtime as a hard dependency
+    // of Iron's Spells 'n Spellbooks.
+    compileOnly fg.deobf("software.bernie.geckolib:geckolib-forge-${minecraft_version}:${geckolib_version}")
 }
 
 // Iron's Spells and Forge 1.20.1 expose transitional APIs that are scheduled

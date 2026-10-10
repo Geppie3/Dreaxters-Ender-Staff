@@ -12,87 +12,51 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 
-public final class EnderStaffRenderer extends BlockEntityWithoutLevelRenderer {
-    private static final ResourceLocation GEOMETRY_MODEL =
-            new ResourceLocation(EnderStaves.MOD_ID, "item/ender_staff_geometry");
+public class EnderStaffRenderer extends BlockEntityWithoutLevelRenderer {
+    private final ResourceLocation geometryModel;
+    private final ResourceLocation eyeGlowModel;
 
-    private static final ResourceLocation EYE_GLOW_MODEL =
-            new ResourceLocation(EnderStaves.MOD_ID, "item/ender_staff_eye_glow");
-
-    public EnderStaffRenderer() {
-        super(
-                Minecraft.getInstance().getBlockEntityRenderDispatcher(),
-                Minecraft.getInstance().getEntityModels()
-        );
+    public EnderStaffRenderer(String geometryModelPath, String eyeGlowModelPath) {
+        super(Minecraft.getInstance().getBlockEntityRenderDispatcher(), Minecraft.getInstance().getEntityModels());
+        this.geometryModel = new ResourceLocation(EnderStaves.MOD_ID, geometryModelPath);
+        this.eyeGlowModel = new ResourceLocation(EnderStaves.MOD_ID, eyeGlowModelPath);
     }
 
     @Override
-    public void renderByItem(
-            ItemStack stack,
-            ItemDisplayContext displayContext,
-            PoseStack poseStack,
-            MultiBufferSource bufferSource,
-            int packedLight,
-            int packedOverlay
-    ) {
+    public void renderByItem(ItemStack stack, ItemDisplayContext displayContext, PoseStack poseStack,
+                             MultiBufferSource bufferSource, int packedLight, int packedOverlay) {
         Minecraft minecraft = Minecraft.getInstance();
+        BakedModel staffModel = minecraft.getModelManager().getModel(geometryModel);
+        BakedModel bakedEyeGlowModel = minecraft.getModelManager().getModel(eyeGlowModel);
 
-        BakedModel staffModel = minecraft.getModelManager().getModel(GEOMETRY_MODEL);
-        BakedModel eyeGlowModel = minecraft.getModelManager().getModel(EYE_GLOW_MODEL);
-
-        // Scales the entire staff and animated Eye in the inventory/GUI only.
         poseStack.pushPose();
-
         if (displayContext == ItemDisplayContext.GUI) {
-            poseStack.translate(0.05D, 0.14D, 0.0D);
+            // GUI has no half-block offset like hand/ground, so recentre in the slot.
+            poseStack.translate(0.33D, 0.47D, 0.0D);
             poseStack.scale(1.15F, 0.84F, 1.15F);
         }
 
-        minecraft.getItemRenderer().render(
-                stack,
-                displayContext,
-                false,
-                poseStack,
-                bufferSource,
-                packedLight,
-                packedOverlay,
-                staffModel
-        );
+        minecraft.getItemRenderer().render(stack, displayContext, false, poseStack, bufferSource,
+                packedLight, packedOverlay, staffModel);
 
-        float time = minecraft.level == null
-                ? 0.0F
-                : minecraft.level.getGameTime() + minecraft.getFrameTime();
+        float time = minecraft.level == null ? 0.0F : minecraft.level.getGameTime() + minecraft.getFrameTime();
+        renderEyeGlow(stack, displayContext, poseStack, bufferSource, packedOverlay, bakedEyeGlowModel, time);
+        poseStack.popPose();
+    }
 
-        float bobUpDown =
-                0.010F * Mth.sin(time * 0.055F) +
-                0.004F * Mth.sin(time * 0.021F + 1.7F);
-
-        float driftSideways =
-                0.003F * Mth.sin(time * 0.037F + 0.8F);
-
-        float driftDepth =
-                0.002F * Mth.cos(time * 0.029F + 2.1F);
-
-        float pulse =
-                1.0F +
-                0.010F * Mth.sin(time * 0.060F);
+    protected void renderEyeGlow(ItemStack stack, ItemDisplayContext displayContext, PoseStack poseStack,
+                                 MultiBufferSource bufferSource, int packedOverlay, BakedModel bakedEyeGlowModel,
+                                 float time) {
+        float bob = 0.010F * Mth.sin(time * 0.055F) + 0.004F * Mth.sin(time * 0.021F + 1.7F);
+        float driftX = 0.003F * Mth.sin(time * 0.037F + 0.8F);
+        float driftZ = 0.002F * Mth.cos(time * 0.029F + 2.1F);
+        float pulse = 1.0F + 0.010F * Mth.sin(time * 0.060F);
 
         poseStack.pushPose();
-        poseStack.translate(driftSideways, bobUpDown, driftDepth);
+        poseStack.translate(driftX, bob, driftZ);
         poseStack.scale(pulse, pulse, pulse);
-
-        minecraft.getItemRenderer().render(
-                stack,
-                displayContext,
-                false,
-                poseStack,
-                bufferSource,
-                LightTexture.FULL_BRIGHT,
-                packedOverlay,
-                eyeGlowModel
-        );
-
-        poseStack.popPose(); // Eye animation
-        poseStack.popPose(); // GUI scale
+        Minecraft.getInstance().getItemRenderer().render(stack, displayContext, false, poseStack, bufferSource,
+                LightTexture.FULL_BRIGHT, packedOverlay, bakedEyeGlowModel);
+        poseStack.popPose();
     }
 }
