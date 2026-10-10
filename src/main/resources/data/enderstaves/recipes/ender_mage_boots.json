@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": { "item": "minecraft:netherite_upgrade_smithing_template" },
+  "base": { "tag": "irons_spellbooks:wizard_base_boots" },
+  "addition": { "item": "cataclysm:witherite_ingot" },
+  "result": { "item": "enderstaves:ender_mage_boots" }
+}

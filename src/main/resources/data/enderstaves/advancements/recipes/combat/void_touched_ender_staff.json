@@ -1,0 +1,17 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ascended_ender_staff": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "items": ["enderstaves:ascended_ender_staff"] }]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": { "recipe": "enderstaves:void_touched_ender_staff" }
+    }
+  },
+  "requirements": [["has_ascended_ender_staff", "has_the_recipe"]],
+  "rewards": { "recipes": ["enderstaves:void_touched_ender_staff"] }
+}

@@ -21,5 +21,10 @@ public final class ClientModelRegistration {
     public static void registerAdditionalModels(ModelEvent.RegisterAdditional event) {
         event.register(new ResourceLocation(EnderStaves.MOD_ID, "item/ender_staff_geometry"));
         event.register(new ResourceLocation(EnderStaves.MOD_ID, "item/ender_staff_eye_glow"));
+        event.register(new ResourceLocation(EnderStaves.MOD_ID, "item/ascended_ender_staff_geometry"));
+        event.register(new ResourceLocation(EnderStaves.MOD_ID, "item/ascended_ender_staff_eye_glow"));
+        event.register(new ResourceLocation(EnderStaves.MOD_ID, "item/void_touched_ender_staff_geometry"));
+        event.register(new ResourceLocation(EnderStaves.MOD_ID, "item/void_touched_ender_staff_eye_glow"));
+        event.register(new ResourceLocation(EnderStaves.MOD_ID, "item/void_touched_ender_staff_shards"));
     }
 }

@@ -1,0 +1,6 @@
+{
+  "type": "cataclysm:weapon_fusion",
+  "base": { "item": "enderstaves:ascended_ender_staff" },
+  "addition": { "item": "cataclysm:void_core" },
+  "result": { "item": "enderstaves:void_touched_ender_staff" }
+}

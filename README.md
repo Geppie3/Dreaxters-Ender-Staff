@@ -1,62 +1,43 @@
 # Ender Staves
 
-A Forge 1.20.1 addon for Iron's Spells 'n Spellbooks.
+A Forge 1.20.1 addon for Iron's Spells 'n Spellbooks. Available on Modrinth & CurseForge.
 
-Available on Modrinth & Curseforge.
+## Items
 
-# Ender Staff
+- **Ender Staff:** +15% Ender power, +25% mana regen, +100 max mana, 6 damage
+- **Ascended Ender Staff:** +25% Ender power, +10% Eldritch power, +35% mana regen, +150 max mana, -10% cooldown, 8 damage
+- **Void-Touched Ender Staff:** +35% Ender power, +15% Eldritch power, +45% mana regen, +200 max mana, -15% cooldown, 10 damage
+- **Ender Mage Armour:** full set grants +65% Ender spell power
 
-While held in the main hand, the staff provides:
+## Recipes
 
-- +15% Ender spell power
-- +25% mana regeneration
-- +100 maximum mana
-- 6 total melee attack damage (1 base player damage + 5 item modifier)
-- Staff casting animation and weapon enchantability inherited from Iron's `StaffItem`
+- **Ascended Ender Staff:** smithing table, Ender Staff + Netherite Upgrade + Witherite Ingot.
+- **Void-Touched Ender Staff:** Mechanical Fusion Anvil, Ascended Ender Staff + Void Core.
+- **Ender Mage Armour:** smithing table, Wizard robes + Netherite Upgrade + Witherite Ingot.
+
+## Changelog
+
+**1.3.0**
+- Added Void-Touched Ender Staff with its own model
+- Ender Mage Armour: working full-set bonus, status effect, recipes and new colours
+- Fixed staff positioning in the inventory
+- L_Ender's Cataclysm is now required
+- Removed unused config file (bonuses are fixed)
+
+- **1.2.5** – Added Ascended Ender Staff and Ender Mage Armour
+- **1.2.1** – Refined inventory staff rendering
+- **1.2.0** – Animated Eye of Ender on the staff
+- **1.1.0** – New staff model
+
+## Requirements
+
+- Minecraft 1.20.1, Forge 47.x
+- Iron's Spells 'n Spellbooks 3.16.2+
+- L_Ender's Cataclysm
 
 ## Building
 
-Use Java 17, then run:
-
-```bash
-./gradlew build
-```
-
-The mod jar is created in `build/libs/`.
-
-For a development client:
-
-```bash
-./gradlew runClient
-```
-
-## Update 1.2.1
-
-- Refined the Ender Staff's inventory GUI positioning, scale, and proportions.
-
-## Update 1.2.0
-
-- Added a full-bright, animated Eye of Ender crystal to the custom Ender Staff model.
-- Added a gentle crystal pulse, floating motion, and subtle drift effect.
-- Added a dedicated Eye glow model and transparent base-eye texture so the animated crystal renders cleanly without overlapping the staff body.
-
-## Update 1.1.0
-
-- Added configurable Ender Staff bonuses:
-  - Ender spell power
-  - Mana regeneration
-  - Maximum mana
-- Added a revised custom 3D Ender Staff model.
-- Added updated staff textures, including the Eye, platform, hilt, holder, handle, and shaft textures.
-
-## Required runtime mods
-
-- Minecraft 1.20.1
-- Forge 47.x
-- Iron's Spells 'n Spellbooks 3.16.2 or newer for 1.20.1
-- Iron's Spells' own required dependencies
-
-L_Ender's Cataclysm is optional.
+Java 17: `./gradlew build` (jar in `build/libs/`).
 
 ## License
 

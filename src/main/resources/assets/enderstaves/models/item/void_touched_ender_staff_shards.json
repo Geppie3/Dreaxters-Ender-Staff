@@ -1,0 +1,335 @@
+{
+  "credit": "Void-Touched Ender Staff Shards",
+  "ambientocclusion": false,
+  "textures": {
+    "0": "enderstaves:item/void_crystal_texture",
+    "particle": "enderstaves:item/void_crystal_texture"
+  },
+  "elements": [
+    {
+      "name": "shard 1",
+      "from": [
+        10.725,
+        13.725,
+        7.725
+      ],
+      "to": [
+        11.275,
+        14.275,
+        8.275
+      ],
+      "rotation": {
+        "angle": 45,
+        "axis": "y",
+        "origin": [
+          11.0,
+          14.0,
+          8.0
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "shard 2",
+      "from": [
+        6.275,
+        14.575000000000001,
+        10.373000000000001
+      ],
+      "to": [
+        6.725,
+        15.025,
+        10.823
+      ],
+      "rotation": {
+        "angle": 45,
+        "axis": "y",
+        "origin": [
+          6.5,
+          14.8,
+          10.598
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "shard 3",
+      "from": [
+        6.25,
+        14.15,
+        5.152
+      ],
+      "to": [
+        6.75,
+        14.65,
+        5.652
+      ],
+      "rotation": {
+        "angle": 45,
+        "axis": "y",
+        "origin": [
+          6.5,
+          14.4,
+          5.402
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#0"
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        90,
+        43.75,
+        -90
+      ],
+      "translation": [
+        1.75,
+        0,
+        0
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        -2.5,
+        0
+      ],
+      "translation": [
+        8,
+        11,
+        10
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        -2.5,
+        0
+      ],
+      "translation": [
+        8,
+        11,
+        10
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        8,
+        9,
+        8
+      ],
+      "scale": [
+        2.5,
+        2.5,
+        2.5
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        0,
+        -2.5,
+        0
+      ],
+      "translation": [
+        8,
+        9,
+        8
+      ],
+      "scale": [
+        2.5,
+        2.5,
+        2.5
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        0,
+        3
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        -90,
+        45.75,
+        90
+      ],
+      "translation": [
+        1.75,
+        -2.25,
+        0
+      ]
+    }
+  }
+}
