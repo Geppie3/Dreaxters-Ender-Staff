@@ -18,7 +18,7 @@ import java.util.UUID;
 
 @Mod.EventBusSubscriber(modid = EnderStaves.MOD_ID)
 public final class EnderMageSetBonus {
-    private static final UUID SET_BONUS_ID = UUID.fromString("c9a1e6d4-2b8f-4a3c-9e7d-5f0a6b8c2d41");
+    private static final UUID SET_BONUS_ID = UUID.fromString("3a1704f5-ada4-4650-92dc-cf69f3a719fb");
     private static final double ENDER_SPELL_POWER_BONUS = 0.65D;
     private static final int CHECK_INTERVAL_TICKS = 20;
 

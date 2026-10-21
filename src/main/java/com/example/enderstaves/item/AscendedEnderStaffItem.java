@@ -13,11 +13,11 @@ import java.util.UUID;
 import java.util.function.Consumer;
 
 public final class AscendedEnderStaffItem extends StaffItem {
-    private static final UUID ENDER_POWER_ID = UUID.fromString("6f8e2f0a-6b31-4b5e-8c2f-2a0f6a1d7c44");
-    private static final UUID ELDRITCH_POWER_ID = UUID.fromString("4a7c9e1d-8b2f-4e6a-9c3d-5f1b7a2e8d60");
-    private static final UUID MANA_REGEN_ID = UUID.fromString("6c1a7e2b-9a3d-4f8e-9b6a-1d4e3c5f8a2b");
-    private static final UUID MAX_MANA_ID = UUID.fromString("9d3f5a1c-2e7b-4a6d-8f0c-3b6d9e2a4c7f");
-    private static final UUID COOLDOWN_ID = UUID.fromString("1b4d6f8a-3c5e-4d7f-9a1b-2c4e6f8a0b3d");
+    private static final UUID ENDER_POWER_ID = UUID.fromString("f57afcb6-85b7-44d5-895b-d7d15b1e0a6d");
+    private static final UUID ELDRITCH_POWER_ID = UUID.fromString("02c52289-e4dc-4e7a-a337-d364d7772996");
+    private static final UUID MANA_REGEN_ID = UUID.fromString("782ff8ef-b3d9-4d5d-a857-f5051261f869");
+    private static final UUID MAX_MANA_ID = UUID.fromString("11f23f2c-6f3a-4690-b9ca-7e8decd44202");
+    private static final UUID COOLDOWN_ID = UUID.fromString("035fdf34-fc82-4937-8b71-37f01b063c59");
 
     public AscendedEnderStaffItem() {
         super(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC), 7.0D, -3.0D,

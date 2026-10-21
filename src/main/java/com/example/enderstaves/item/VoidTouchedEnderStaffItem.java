@@ -13,11 +13,11 @@ import java.util.UUID;
 import java.util.function.Consumer;
 
 public final class VoidTouchedEnderStaffItem extends StaffItem {
-    private static final UUID ENDER_POWER_ID = UUID.fromString("8f3a1c2d-6b4e-4f19-a2d7-1c9e4b6a8f30");
-    private static final UUID ELDRITCH_POWER_ID = UUID.fromString("2d7e4f1a-9c3b-4e6d-8a1f-5b7c3d9e2f41");
-    private static final UUID MANA_REGEN_ID = UUID.fromString("b6c8d2a4-3e5f-4a7b-9d1c-6f8a2b4c7e93");
-    private static final UUID MAX_MANA_ID = UUID.fromString("4e1a7c9d-2b6f-4d8e-a3c5-9f2d6b8e1a74");
-    private static final UUID COOLDOWN_ID = UUID.fromString("7a2c5e8f-4d1b-4c6a-8e3f-2b9d5c7a1e05");
+    private static final UUID ENDER_POWER_ID = UUID.fromString("1173b790-eb38-4026-8136-8f2f9da94644");
+    private static final UUID ELDRITCH_POWER_ID = UUID.fromString("8ad8683d-e565-4295-89a7-86fe8de2f4f9");
+    private static final UUID MANA_REGEN_ID = UUID.fromString("5451aad0-016d-40bc-9232-7ea9d8c9bc36");
+    private static final UUID MAX_MANA_ID = UUID.fromString("46ca1eab-85c7-42ba-adcd-dd82205fa85c");
+    private static final UUID COOLDOWN_ID = UUID.fromString("c2e54f22-4a28-4c30-9602-1c4220d93d0e");
 
     public VoidTouchedEnderStaffItem() {
         super(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC), 9.0D, -3.0D,
